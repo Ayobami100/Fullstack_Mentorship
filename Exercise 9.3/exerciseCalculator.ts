@@ -52,10 +52,10 @@ interface exerciseInputType {
     return {
       periodLength,
       trainingDays,
-      success,   
+      success,
+      target,
       rating,
       ratingDescription,
-      target,
       average
     };
   };
@@ -63,8 +63,8 @@ interface exerciseInputType {
   
   if (require.main === module) {
     try {
-      // const { value = 1, array = [3,0,2,4.5,0,3] } = exerciseParseArguments(process.argv);
-      console.log(calculateExercise([3, 0, 2, 4.5, 0, 3,1],2));
+      const { value, array } = exerciseParseArguments(process.argv);
+      console.log(calculateExercise(array, value));
     } catch (e) {
       console.log(e.message);
     }
