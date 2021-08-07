@@ -13,6 +13,8 @@ const Displayvote = ({vote, anecdote}) =>
 let newanecdotes = [0,0,0,0,0,0]
 let highestVote
 
+
+
 const App = () => {
 
   const anecdotes = [
